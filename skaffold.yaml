@@ -5,12 +5,12 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  # local:
-  #   push: false
-  googleCloudBuild:
-    projectId: sublime-command-380816
+  local:
+    push: false
+  # googleCloudBuild:
+  #   projectId: sublime-command-380816
   artifacts:
-    - image: us.gcr.io/sublime-command-380816/auth
+    - image: nmoon778/auth
       context: auth
       docker:
         dockerfile: Dockerfile

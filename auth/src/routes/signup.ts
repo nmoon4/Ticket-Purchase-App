@@ -15,7 +15,13 @@ router.post(
   (req: Request, res: Response) => {
     const errors = validationResult(req)
 
+    if (!errors.isEmpty()) {
+      return res.status(400).send(errors.array()) // .array() allows the errors to be sent as json data
+    }
+
     const { email, password } = req.body;
+
+    res.send({})
   }
 );
 

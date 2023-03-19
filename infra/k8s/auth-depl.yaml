@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: us.gcr.io/sublime-command-380816/auth
+          image: nmoon778/auth
 ---
 apiVersion: v1
 kind: Service
